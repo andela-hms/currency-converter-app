@@ -33,7 +33,7 @@
     "color": "2.0.0",
     "expo": "^23.0.2",
     "moment": "2.18.1",
-    "react": "^16.1.1",
+    "react": "^16.0.0",
     "react-native": "^0.50.4",
     "react-native-extended-stylesheet": "0.8.0"
   }
