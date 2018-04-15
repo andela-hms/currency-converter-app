@@ -15,7 +15,8 @@ export default EStyleSheet.create({
     height: INPUT_HEIGHT,
     borderRadius: BORDER_RADIUS,
     flexDirection: 'row',
-    marginVertical: 11,
+    marginVertical: '3%',
+    bottom: '40%',
   },
 
   containerDisabled: {
@@ -44,7 +45,6 @@ export default EStyleSheet.create({
     fontSize: 18,
     paddingHorizontal: 8,
     color: '$inputText',
-
   },
 
   separator: {
