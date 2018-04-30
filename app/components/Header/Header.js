@@ -5,11 +5,11 @@ import PropTypes from 'prop-types';
 import styles from './styles';
 
 const Header = ({ onPress }) => (
-  <View style={styles.container}>
-    <TouchableOpacity style={styles.button} onPress={onPress}>
-      <Image resizeMode="contain" style={styles.icon} source={require('./images/gear.png')} />
-    </TouchableOpacity>
-  </View>
+  <TouchableOpacity style={styles.button} onPress={onPress}>
+    <View style={styles.container}>
+        <Image resizeMode="contain" style={styles.icon} source={require('./images/gear.png')} />
+    </View>
+  </TouchableOpacity>
 );
 
 Header.PropTypes = {

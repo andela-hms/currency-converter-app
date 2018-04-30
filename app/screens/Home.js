@@ -7,6 +7,7 @@ import { InputWithButton } from '../components/TextInput';
 import { ClearButton } from '../components/Button';
 import { LastConverted } from '../components/Text';
 import { Header } from '../components/Header';
+import PropTypes from 'prop-types';
 
 const TEMP_BASE_CURRENCY = 'USD';
 const TEMP_QUOTE_CURRENCY = 'KSH';
@@ -16,12 +17,18 @@ const TEMP_CONVERSION_RATE = 0.7974;
 const TEMP_CONVERSION_DATE = new Date();
 
 class Home extends Component {
+  static PropTypes = {
+    navigation: PropTypes.object,
+  }
+
   handlePressBaseCurrency = () => {
     console.log('press base');
+    this.props.navigation.navigate('CurrencyList', { title: 'Base Currency' });
   }
 
   handlePressQuoteCurrency = () => {
     console.log('press quote');
+    this.props.navigation.navigate('CurrencyList',  { title: 'Quote Currency' });
   }
 
   handleTextChange = (text) => {
@@ -29,12 +36,12 @@ class Home extends Component {
   }
 
   handleCurrencySwap = () => {
-    console.log('currency swap')
+    console.log('currency swap');
   }
 
-  handleOptionsPress = () => {
-    console.log('handle Options Press')
-
+  _handleOptionsPress = () => {
+    console.log('handle Options Press');
+    this.props.navigation.navigate('Options');
   }
 
   render() {
@@ -43,8 +50,9 @@ class Home extends Component {
         <StatusBar translucent={false} barStyle="light-content" />
 
         <Header
-          onPress={this.handleOptionsPress}
+          onPress={this._handleOptionsPress}
         />
+
         <KeyboardAvoidingView behavior="padding">
           <Logo />
 

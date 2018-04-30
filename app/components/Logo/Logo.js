@@ -12,6 +12,7 @@ class Logo extends Component {
     this.containerImageWidth = new Animated.Value(styles.$largeContainerSize);
     this.imageWidth = new Animated.Value(styles.$largeImageSize);
   }
+  
   componentDidMount() {
     this.keyboardDidShowListener = Keyboard.addListener('keyboardWillShow', this.keyboardDidShow);
     this.keyboardDidHideListener = Keyboard.addListener('keyboardWillHide', this.keyboardDidHide);

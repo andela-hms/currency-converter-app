@@ -9,9 +9,6 @@ export default EStyleSheet.create({
    left: 0,
    right: 0,
    top: 0,
-   '@media android': {
-     paddingTop: StatusBar.currentHeight,
-   },
  },
 
  button: {
@@ -22,6 +19,6 @@ export default EStyleSheet.create({
 
  icon: {
 
- },
+},
 
 });
