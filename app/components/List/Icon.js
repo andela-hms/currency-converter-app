@@ -4,10 +4,14 @@ import PropTypes from 'prop-types';
 
 import styles from './styles';
 
-const Icon = ({ checkmark, visible}) => {
+const Icon = ({ checkmark, visible, iconBackground}) => {
   const IconStyles = [styles.icon];
   if (visible) {
     IconStyles.push(styles.iconVisible);
+  }
+
+  if (iconBackground) {
+    IconStyles.push({ backgroundColor: iconBackground })
   }
 
   return (
@@ -20,5 +24,6 @@ const Icon = ({ checkmark, visible}) => {
 Icon.PropTypes = {
   checkmark: PropTypes.bool,
   visible: PropTypes.bool,
+  iconBackground: PropTypes.string,
 }
 export default Icon;
